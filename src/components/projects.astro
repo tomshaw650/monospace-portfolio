@@ -1,0 +1,43 @@
+---
+const projects = [
+  { name: "Ginto", description: "A project I worked on for my wife and I to manage our groceries and meals, featuring a realtime shopping list", tech: ["Next.js", "Tailwind", "Neon", "shadcn UI", "Lucia Auth", "Liveblocks", "zod"], links: { demo: "https://ginto.tmsh.dev", github: "https://github.com/tomshaw650/ginto" }},
+  { name: "Lumbr", description: "My dissertation project, a Next.js web application that focused on communities of practice and social media", tech: ["Next.js", "tRPC", "Tailwind", "TanStack Query", "Prisma", "Auth.js", "Vercel"], links: { demo: "https://lumbr-tomshaw650.vercel.app/", github: "https://github.com/tomshaw650/lumbr" }},
+  { name: "tupload", description: "A CLI tool - provide a path to an image on your machine and get a permalink back", tech: ["TypeScript", "commander", "imgbb API"], links: { github: "https://github.com/tomshaw650/tupload" }}
+];
+---
+
+<section id="projects" class="text-white mt-14">
+  <h2 class="uppercase font-bold mb-2">projects</h2>
+  <hr class="mb-4 border-dashed" />
+  <table class="w-full border">
+    <thead>
+      <tr class="border-b border">
+        <th class="text-left py-2 pl-1">Name</th>
+        <th class="text-left py-2 pl-5">Description</th>
+        <th class="text-left py-2">Tech</th>
+        <th class="text-left py-2">Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      {projects.map((project) => (
+        <tr class="border-b border-dashed">
+          <td class="py-3 pl-1">{project.name}</td>
+          <td class="text-xs py-3 px-5">{project.description}</td>
+          <td class="py-3">
+            {project.tech.map((tag) => (
+              <span class="bg-white text-black p-1 mr-1 text-xs px-1">{tag}</span>
+            ))}
+          </td>
+          <td class="py-3">
+            {project.links.demo && (
+              <a href={project.links.demo} target="_blank" class="underline mr-2">Demo</a>
+            )}
+            {project.links.github && (
+              <a href={project.links.github} target="_blank" class="underline pr-1">GitHub</a>
+            )}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</section>

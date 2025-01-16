@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Contents from '../components/contents.astro';
+import Introduction from '../components/introduction.astro';
+import Projects from '../components/projects.astro';
+import Blog from '../components/blog.astro';
+import Contact from '../components/contact.astro';
+---
+
+<Layout>
+  <div class="p-4"></div>
+  <Header />
+  <span class="italic text-white text-xs text-center place-self-center w-full max-w-lg mt-5">This page is inspired by the design of <a class="underline" href="https://owickstrom.github.io/the-monospace-web/" target="_blank">The Monospace Web by Oskar Wickström</a>. Here's hoping for a more simple, effective web!</span>
+  <Contents />
+  <Introduction />
+  <Projects />
+  <Blog />
+  <Contact />
+</Layout>

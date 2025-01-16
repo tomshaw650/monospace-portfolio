@@ -1,0 +1,32 @@
+---
+import * as packageJson from "../../package.json";
+---
+
+<table class="text-white border-white border-2 w-[100%]">
+  <tbody>
+    <tr>
+      <td class="border-2 p-2 pr-28" colspan="2" rowspan="2">
+        <h1 class="font-jetbrainsbold font-bold uppercase tracking-wide text-4xl">portfolio</h1>
+        <span>See my projects, posts and links</span>
+      </td>
+      <th class="border-2 p-1">Version</th>
+      <td class="border-2"><span class="float-right mr-2">v{packageJson.version}</span></td>
+    </tr>
+    <tr>
+      <th class="border-2 p-1">Updated</th>
+      <td class="border-2">
+        <time class="float-right mr-2">2025-09-01</time>
+      </td>
+    </tr>
+    <tr>
+      <th class="border-2 p-1 w-20">Author</th>
+      <td class="border-2">
+        <a href="https://github.com/tomshaw650" target="_blank">
+          <cite class="not-italic underline ml-2">Tom Shaw</cite>
+        </a>
+      </td>
+      <th class="border-2">License</th>
+      <td class="border-2"><span class="float-right mr-2">MIT</span></td>
+    </tr>
+  </tbody>
+</table>

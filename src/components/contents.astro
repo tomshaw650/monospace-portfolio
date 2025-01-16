@@ -1,0 +1,18 @@
+---
+const links = [
+  { name: "Introduction", href: "#intro"},
+  { name: "Projects", href: "#projects" },
+  { name: "Blog", href: "#blog" },
+  { name: "Contact", href: "#contact" },
+];
+---
+
+<section class="text-white mt-14">
+  <h2 class="uppercase font-bold mb-3">contents</h2>
+  <hr class="mb-4 border-dashed" />
+  <ul class="list-[square] ml-5">
+    {links.map((link) => (
+      <li class="underline"><a href={link.href}>{link.name}</a></li>
+    ))}
+  </ul>
+</section>
