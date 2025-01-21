@@ -6,13 +6,15 @@
     cx="28.0684" 
     cy="32.818" 
     rx="3" 
-    ry="5.4038" />
+    ry="5.4038"
+    fill="white" />
   
   <ellipse 
     cx="43.9316" 
     cy="32.8216" 
     rx="3" 
-    ry="5.4038" />
+    ry="5.4038"
+    fill="white" />
   
   <g 
     fill="none" 

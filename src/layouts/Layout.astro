@@ -1,49 +1,48 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="../app.css">
-		<title>Tom Shaw</title>
-	</head>
-	<body class="grid-container bg-black">
-			<div class="left"></div>
-			<div class="main">
-				<slot />
-			</div>
-			<div class="right"></div>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="../app.css" />
+    <title>Tom Shaw</title>
+  </head>
+  <body class="grid-container bg-black">
+    <div class="left"></div>
+    <div class="main">
+      <slot />
+    </div>
+    <div class="right"></div>
+  </body>
 </html>
 
 <style>
-	.grid-container {
-		width: 100vw;
-		display: grid;
-		grid-template-columns: 0.8fr 1.4fr 0.8fr;
-		grid-template-rows: 0.9fr 1.1fr 1fr;
-		grid-template-areas: 
-			"left main right"
-			"left main right"
-			"left main right"; 
-	}
+  .grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr 0.8fr;
+    grid-template-rows: 0.9fr 1.1fr 1fr;
+    grid-template-areas:
+      "left main right"
+      "left main right"
+      "left main right";
+  }
 
-	.left {
-		grid-area: left;
-	}
+  .left {
+    grid-area: left;
+  }
 
-	.right {
-		grid-area: right;
-	}
+  .right {
+    grid-area: right;
+  }
 
-	.main {
-		display: grid;
-		grid-area: main;
-	}
+  .main {
+    display: grid;
+    grid-area: main;
+  }
 
-	:global(table) {
-		justify-self: center;
-	}
+  :global(table) {
+    justify-self: center;
+  }
 </style>
